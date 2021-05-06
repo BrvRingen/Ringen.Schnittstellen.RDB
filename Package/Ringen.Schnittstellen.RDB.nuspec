@@ -17,9 +17,17 @@
     <tags>BRV, Ringen, Mannschaftskämpfe, Interfaces, Schnittstellen, RDB</tags>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
+        <dependency id="Flurl" version="3.0.2" />
+        <dependency id="Newtonsoft.Json" version="13.0.1" />
+        <dependency id="Ninject" version="3.3.4" />
+        <dependency id="NLog" version="4.7.9" />
         <dependency id="Ringen.Schnittstellen" version="1.0.3" />
       </group>
       <group targetFramework=".NETStandard2.1">
+        <dependency id="Flurl" version="3.0.2" />
+        <dependency id="Newtonsoft.Json" version="13.0.1" />
+        <dependency id="Ninject" version="3.3.4" />
+        <dependency id="NLog" version="4.7.9" />
         <dependency id="Ringen.Schnittstellen" version="1.0.3" />
       </group>
     </dependencies>
