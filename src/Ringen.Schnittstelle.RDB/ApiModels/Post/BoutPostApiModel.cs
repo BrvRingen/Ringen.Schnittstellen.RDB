@@ -1,8 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
-using Ringen.Schnittstelle.RDB.ApiModels.Post;
 
-namespace Ringen.Schnittstelle.RDB.ApiModels
+namespace Ringen.Schnittstellen.RDB.ApiModels.Post
 {
     internal class BoutPostApiModel
     {

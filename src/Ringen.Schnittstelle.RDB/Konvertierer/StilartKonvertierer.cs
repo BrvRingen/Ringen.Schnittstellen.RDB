@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Ringen.Schnittstellen.Contracts.Models.Enums;
 
-namespace Ringen.Schnittstelle.RDB.Konvertierer
+namespace Ringen.Schnittstellen.RDB.Konvertierer
 {
     internal class StilartKonvertierer : KonvertiererBase<Stilart>
     {

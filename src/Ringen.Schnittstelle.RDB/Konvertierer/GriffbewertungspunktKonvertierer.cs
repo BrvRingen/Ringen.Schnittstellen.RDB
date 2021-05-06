@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using Ringen.Schnittstellen.Contracts.Models;
 using Ringen.Schnittstellen.Contracts.Models.Enums;
 
-namespace Ringen.Schnittstelle.RDB.Konvertierer
+namespace Ringen.Schnittstellen.RDB.Konvertierer
 {
     internal class GriffbewertungspunktKonvertierer
     {

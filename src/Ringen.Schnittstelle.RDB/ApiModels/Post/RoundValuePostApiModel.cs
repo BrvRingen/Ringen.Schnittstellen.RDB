@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Ringen.Schnittstelle.RDB.ApiModels.Post
+namespace Ringen.Schnittstellen.RDB.ApiModels.Post
 {
     internal class RoundValuePostApiModel
     {

@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Ringen.Schnittstelle.RDB.DependencyInjection;
+﻿using Ringen.Schnittstellen.RDB.DependencyInjection;
+using Ringen.Schnittstellen.RDB.Factories;
+using Ringen.Schnittstellen.RDB.Models;
 
 namespace Ringen.Schnittstellen.RDB
 {
     public class StartUp
     {
-        public static void Init(Models.RdbSystemSettings settings)
+        public static void Init(RdbSystemSettings settings)
         {
+            RdbServiceProvider.Init(settings);
             RDBNinjectKernel.CreateKernel();
         }
     }

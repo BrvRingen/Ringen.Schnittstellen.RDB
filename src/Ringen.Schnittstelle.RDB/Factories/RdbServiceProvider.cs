@@ -1,20 +1,19 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using Http.Library.Models;
 using Http.Library.Services;
 using Ninject.Activation;
-using Ringen.Schnittstelle.RDB.Models;
-using Ringen.Schnittstelle.RDB.Services;
+using Ringen.Schnittstellen.RDB.Models;
+using Ringen.Schnittstellen.RDB.Services;
 
-namespace Ringen.Schnittstelle.RDB.Factories
+namespace Ringen.Schnittstellen.RDB.Factories
 {
     internal class RdbServiceProvider : Provider<RdbService>
     {
         private const string Schnittstelle = "RDB";
 
-        private RdbSystemSettings _settings;
-
-        public RdbServiceProvider(RdbSystemSettings settings)
+        private static RdbSystemSettings _settings;
+        
+        public static void Init(RdbSystemSettings settings)
         {
             _settings = settings;
         }

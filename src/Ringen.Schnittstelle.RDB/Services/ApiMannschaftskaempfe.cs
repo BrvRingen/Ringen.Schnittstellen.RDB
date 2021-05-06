@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-using Ringen.Schnittstelle.RDB.ApiModels;
-using Ringen.Schnittstelle.RDB.Mapper;
 using Ringen.Schnittstellen.Contracts.Exceptions;
 using Ringen.Schnittstellen.Contracts.Models;
 using Ringen.Schnittstellen.Contracts.Services;
+using Ringen.Schnittstellen.RDB.ApiModels;
+using Ringen.Schnittstellen.RDB.Mapper;
 
-namespace Ringen.Schnittstelle.RDB.Services
+namespace Ringen.Schnittstellen.RDB.Services
 {
     internal class ApiMannschaftskaempfe : IApiMannschaftskaempfe
     {

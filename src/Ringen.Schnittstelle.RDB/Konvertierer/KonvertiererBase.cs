@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Ringen.Schnittstelle.RDB.Konvertierer
+namespace Ringen.Schnittstellen.RDB.Konvertierer
 {
     internal abstract class KonvertiererBase<T>
     {

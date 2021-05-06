@@ -1,7 +1,6 @@
-﻿using System;
-using Ninject;
+﻿using Ninject;
 
-namespace Ringen.Schnittstelle.RDB.DependencyInjection
+namespace Ringen.Schnittstellen.RDB.DependencyInjection
 {
     internal class RDBNinjectKernel
     {

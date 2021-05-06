@@ -6,10 +6,10 @@ using Http.Library.Models;
 using Http.Library.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Ringen.Schnittstelle.RDB.ApiModels;
-using Ringen.Schnittstelle.RDB.Models;
+using Ringen.Schnittstellen.RDB.ApiModels.Post;
+using Ringen.Schnittstellen.RDB.Models;
 
-namespace Ringen.Schnittstelle.RDB.Services
+namespace Ringen.Schnittstellen.RDB.Services
 {
     internal class RdbService
     {

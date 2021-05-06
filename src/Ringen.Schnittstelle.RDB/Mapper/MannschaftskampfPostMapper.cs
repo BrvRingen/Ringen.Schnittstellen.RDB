@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Ringen.Schnittstelle.RDB.ApiModels;
-using Ringen.Schnittstelle.RDB.ApiModels.Post;
-using Ringen.Schnittstelle.RDB.Konvertierer;
 using Ringen.Schnittstellen.Contracts.Models;
+using Ringen.Schnittstellen.RDB.ApiModels.Post;
+using Ringen.Schnittstellen.RDB.Konvertierer;
 
-namespace Ringen.Schnittstelle.RDB.Mapper
+namespace Ringen.Schnittstellen.RDB.Mapper
 {
     internal class MannschaftskampfPostMapper
     {

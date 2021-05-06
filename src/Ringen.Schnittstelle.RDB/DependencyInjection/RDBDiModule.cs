@@ -1,12 +1,11 @@
 ﻿using Ninject.Modules;
-using Ringen.Schnittstelle.RDB.Factories;
-using Ringen.Schnittstelle.RDB.Konvertierer;
-using Ringen.Schnittstelle.RDB.Mapper;
-using Ringen.Schnittstelle.RDB.Models;
-using Ringen.Schnittstelle.RDB.Services;
 using Ringen.Schnittstellen.Contracts.Services;
+using Ringen.Schnittstellen.RDB.Factories;
+using Ringen.Schnittstellen.RDB.Konvertierer;
+using Ringen.Schnittstellen.RDB.Mapper;
+using Ringen.Schnittstellen.RDB.Services;
 
-namespace Ringen.Schnittstelle.RDB.DependencyInjection
+namespace Ringen.Schnittstellen.RDB.DependencyInjection
 {
     internal class RDBDiModule : NinjectModule
     {

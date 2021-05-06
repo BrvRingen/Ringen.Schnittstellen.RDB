@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Ringen.Schnittstelle.RDB.ApiModels
+namespace Ringen.Schnittstellen.RDB.ApiModels
 {
     internal class BoutApiModel
     {

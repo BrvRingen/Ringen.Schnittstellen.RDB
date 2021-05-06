@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Ringen.Schnittstelle.RDB.ApiModels;
 using Ringen.Schnittstellen.Contracts.Models;
+using Ringen.Schnittstellen.RDB.ApiModels;
 
-namespace Ringen.Schnittstelle.RDB.Mapper
+namespace Ringen.Schnittstellen.RDB.Mapper
 {
     internal class LeistungsklasseMapper
     {
