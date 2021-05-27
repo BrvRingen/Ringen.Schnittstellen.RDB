@@ -12,7 +12,7 @@ namespace Ringen.Schnittstellen.RDB.Services
 {
     internal class ApiStammdaten : IApiStammdaten
     {
-        private RdbService _rdbService;
+        private readonly RdbService _rdbService;
 
         public ApiStammdaten(RdbService rdbService)
         {

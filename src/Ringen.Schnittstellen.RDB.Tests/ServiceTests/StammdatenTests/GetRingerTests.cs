@@ -2,14 +2,13 @@
 using System.Threading.Tasks;
 using FluentAssertions;
 using NUnit.Framework;
-using Ringen.Schnittstelle.RDB.Factories;
-using Ringen.Schnittstelle.RDB.Services;
 using Ringen.Schnittstellen.Contracts.Exceptions;
 using Ringen.Schnittstellen.Contracts.Models;
 using Ringen.Schnittstellen.Contracts.Models.Enums;
 using Ringen.Schnittstellen.Contracts.Services;
+using Ringen.Schnittstellen.RDB.Factories;
 
-namespace Ringen.Schnittstelle.RDB.Tests.ServiceTests.StammdatenTests
+namespace Ringen.Schnittstellen.RDB.Tests.ServiceTests.StammdatenTests
 {
     [TestFixture]
     public class GetRingerTests
@@ -33,7 +32,7 @@ namespace Ringen.Schnittstelle.RDB.Tests.ServiceTests.StammdatenTests
         public void Pass_113581_erwarte_korrekte_Daten()
         {
             Ringer ringer = _apiStammdaten.Get_Ringer_Async("11358").Result;
-            ringer.Vorname.Should().Be("M."); //In Testdatenbank anonymisiert (Immer erster Buchstabe des Vornamens mit .)
+            ringer.Vorname.Should().Be("Matin"); //In Testdatenbank anonymisiert (Immer erster Buchstabe des Vornamens mit .)
             ringer.Nachname.Should().Be("Sakhi");
         }
 
@@ -49,12 +48,12 @@ namespace Ringen.Schnittstelle.RDB.Tests.ServiceTests.StammdatenTests
         {
             Ringer ringer = _apiStammdaten.Get_Ringer_Async("1").Result;
 
-            ringer.Vorname.Should().Be("Oliver");
-            ringer.Nachname.Should().Be("Stach");
-            ringer.Geburtsdatum.Should().Be(new DateTime(1966,5,20));
+            ringer.Vorname.Should().Be("Aziz");
+            ringer.Nachname.Should().Be("Kiamars");
+            ringer.Geburtsdatum.Should().Be(new DateTime(1973, 02, 09));
             ringer.Geschlecht.Should().Be(Geschlecht.Maennlich);
-            ringer.Vereinsnummer.Should().Be("100079");
-            ringer.Status.Should().Be("ND");
+            ringer.Vereinsnummer.Should().Be("100037");
+            ringer.Status.Should().Be("");
             ringer.Startausweisnummer.Should().Be("1");
             ringer.Lizenznummer.Should().BeNull();
         }

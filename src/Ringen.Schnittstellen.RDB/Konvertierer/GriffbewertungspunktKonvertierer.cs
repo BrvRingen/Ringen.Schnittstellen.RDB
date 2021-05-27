@@ -8,8 +8,8 @@ namespace Ringen.Schnittstellen.RDB.Konvertierer
 {
     internal class GriffbewertungspunktKonvertierer
     {
-        private HeimGastKonvertierer _heimGastKonvertierer;
-        private GriffbewertungsTypKonvertierer _griffbewertungsTypKonvertierer;
+        private readonly HeimGastKonvertierer _heimGastKonvertierer;
+        private readonly GriffbewertungsTypKonvertierer _griffbewertungsTypKonvertierer;
 
         public GriffbewertungspunktKonvertierer(HeimGastKonvertierer heimGastKonvertierer, GriffbewertungsTypKonvertierer griffbewertungsTypKonvertierer)
         {

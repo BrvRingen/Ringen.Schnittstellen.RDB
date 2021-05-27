@@ -11,9 +11,9 @@ namespace Ringen.Schnittstellen.RDB.Mapper
 {
     internal class EinzelkampfMapper
     {
-        private StilartKonvertierer _stilartKonvertierer;
-        private SiegartKonvertierer _siegartKonvertierer;
-        private GriffbewertungspunktKonvertierer _griffbewertungspunktKonvertierer;
+        private readonly StilartKonvertierer _stilartKonvertierer;
+        private readonly SiegartKonvertierer _siegartKonvertierer;
+        private readonly GriffbewertungspunktKonvertierer _griffbewertungspunktKonvertierer;
 
         public EinzelkampfMapper(StilartKonvertierer stilartKonvertierer, SiegartKonvertierer siegartKonvertierer, GriffbewertungspunktKonvertierer griffbewertungspunktKonvertierer)
         {

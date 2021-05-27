@@ -8,9 +8,9 @@ namespace Ringen.Schnittstellen.RDB.Mapper
 {
     internal class MannschaftskampfPostMapper
     {
-        private StilartKonvertierer _stilartKonvertierer;
-        private SiegartKonvertierer _siegartKonvertierer;
-        private GriffbewertungspunktKonvertierer _griffbewertungspunktKonvertierer;
+        private readonly StilartKonvertierer _stilartKonvertierer;
+        private readonly SiegartKonvertierer _siegartKonvertierer;
+        private readonly GriffbewertungspunktKonvertierer _griffbewertungspunktKonvertierer;
 
         public MannschaftskampfPostMapper(StilartKonvertierer stilartKonvertierer, SiegartKonvertierer siegartKonvertierer, GriffbewertungspunktKonvertierer griffbewertungspunktKonvertierer)
         {

@@ -6,15 +6,15 @@ using Ringen.Schnittstellen.Contracts.Exceptions;
 using Ringen.Schnittstellen.Contracts.Models;
 using Ringen.Schnittstellen.Contracts.Services;
 using Ringen.Schnittstellen.RDB.ApiModels.Post;
+using Ringen.Schnittstellen.RDB.Helpers;
 using Ringen.Schnittstellen.RDB.Mapper;
-using Ringen.Shared.Helpers;
 
 namespace Ringen.Schnittstellen.RDB.Services
 {
     internal class ApiErgebnisdienst : IApiErgebnisdienst
     {
-        private RdbService _rdbService;
-        private MannschaftskampfPostMapper _mapper;
+        private readonly RdbService _rdbService;
+        private readonly MannschaftskampfPostMapper _mapper;
         
         public ApiErgebnisdienst(RdbService rdbService, MannschaftskampfPostMapper mapper)
         {

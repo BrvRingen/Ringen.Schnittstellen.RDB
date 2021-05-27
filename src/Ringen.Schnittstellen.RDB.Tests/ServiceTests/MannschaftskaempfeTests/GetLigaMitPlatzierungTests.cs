@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using Ringen.Schnittstelle.RDB.Factories;
 using Ringen.Schnittstellen.Contracts.Models;
 using Ringen.Schnittstellen.Contracts.Services;
+using Ringen.Schnittstellen.RDB.Factories;
 
-namespace Ringen.Schnittstelle.RDB.Tests.ServiceTests.MannschaftskaempfeTests
+namespace Ringen.Schnittstellen.RDB.Tests.ServiceTests.MannschaftskaempfeTests
 {
     [TestFixture]
     public class GetLigaMitPlatzierungTests

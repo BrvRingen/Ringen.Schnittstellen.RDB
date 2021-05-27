@@ -13,8 +13,8 @@ namespace Ringen.Schnittstellen.RDB.Services
 {
     internal class ApiMannschaftskaempfe : IApiMannschaftskaempfe
     {
-        private RdbService _rdbService;
-        private EinzelkampfMapper _einzelkampfMapper;
+        private readonly RdbService _rdbService;
+        private readonly EinzelkampfMapper _einzelkampfMapper;
         
         public ApiMannschaftskaempfe(RdbService rdbService, EinzelkampfMapper einzelkampfMapper)
         {

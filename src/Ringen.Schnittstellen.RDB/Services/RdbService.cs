@@ -15,8 +15,8 @@ namespace Ringen.Schnittstellen.RDB.Services
     {
         private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
 
-        private IHttpService _httpService;
-        private RdbSystemSettings _settings;
+        private readonly IHttpService _httpService;
+        private readonly RdbSystemSettings _settings;
 
         public RdbService(IHttpService httpService, RdbSystemSettings settings)
         {

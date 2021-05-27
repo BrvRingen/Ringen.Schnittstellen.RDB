@@ -1,9 +1,11 @@
-﻿using NUnit.Framework;
-using Ringen.Schnittstelle.RDB.DependencyInjection;
-using Ringen.Schnittstelle.RDB.Factories;
-using Ringen.Schnittstellen.Contracts.Models.Enums;
+﻿using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Text;
+using NUnit.Framework;
+using Ringen.Schnittstellen.RDB.Models;
 
-namespace Ringen.Schnittstelle.RDB.Tests
+namespace Ringen.Schnittstellen.RDB.Tests
 {
     [SetUpFixture]
     class StartUp
@@ -11,12 +13,8 @@ namespace Ringen.Schnittstelle.RDB.Tests
         [OneTimeSetUp]
         public void Init()
         {
-            if (Ringen.Tests.Shared.StartUp.IstInitialisiert == false)
-            {
-                Ringen.Tests.Shared.StartUp.Init();
-            }
-
-            Ringen.Schnittstelle.RDB.StartUp.Init();
+            var settings = new RdbSystemSettings("http://test.rdb.ringen-nrw.de", new NetworkCredential("",""));
+            RDB.StartUp.Init(settings);
         }
     }
 }

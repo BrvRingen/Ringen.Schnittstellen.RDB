@@ -12,8 +12,8 @@ namespace Ringen.Schnittstellen.RDB.Services
 {
     internal class ApiSaisonInformationen : IApiSaisonInformationen
     {
-        private RdbService _rdbService;
-        private EinzelkampfMapper _einzelkampfMapper;
+        private readonly RdbService _rdbService;
+        private readonly EinzelkampfMapper _einzelkampfMapper;
 
         public ApiSaisonInformationen(RdbService rdbService, EinzelkampfMapper einzelkampfMapper)
         {

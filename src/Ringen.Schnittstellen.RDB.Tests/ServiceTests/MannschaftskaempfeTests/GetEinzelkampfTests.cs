@@ -4,13 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
 using NUnit.Framework;
-using Ringen.Schnittstelle.RDB.Factories;
 using Ringen.Schnittstellen.Contracts.Exceptions;
 using Ringen.Schnittstellen.Contracts.Models;
 using Ringen.Schnittstellen.Contracts.Models.Enums;
 using Ringen.Schnittstellen.Contracts.Services;
+using Ringen.Schnittstellen.RDB.Factories;
 
-namespace Ringen.Schnittstelle.RDB.Tests.ServiceTests.MannschaftskaempfeTests
+namespace Ringen.Schnittstellen.RDB.Tests.ServiceTests.MannschaftskaempfeTests
 {
     [TestFixture]
     public class GetEinzelkampfTests
@@ -61,16 +61,18 @@ namespace Ringen.Schnittstelle.RDB.Tests.ServiceTests.MannschaftskaempfeTests
             einzelkampf.Kommentar.Should().Be("");
 
             //"PR62,AR97,1B128,4B171,2B176,2B226,2B237,2B241,2B255"
-            List<Griffbewertungspunkt> sollPunkte = new List<Griffbewertungspunkt>();
-            sollPunkte.Add(new Griffbewertungspunkt(HeimGast.Heim, GriffbewertungsTyp.Passiv, new TimeSpan(0, 1, 2)));
-            sollPunkte.Add(new Griffbewertungspunkt(HeimGast.Heim, GriffbewertungsTyp.Aktivitaetszeit, new TimeSpan(0, 1, 37)));
-            sollPunkte.Add(new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 2, 8), 1));
-            sollPunkte.Add(new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 2, 51),4));
-            sollPunkte.Add(new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 2, 56),2));
-            sollPunkte.Add(new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 3, 46),2));
-            sollPunkte.Add(new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 3, 57),2));
-            sollPunkte.Add(new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 4, 1),2));
-            sollPunkte.Add(new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 4, 15), 2));
+            List<Griffbewertungspunkt> sollPunkte = new List<Griffbewertungspunkt>
+            {
+                new Griffbewertungspunkt(HeimGast.Heim, GriffbewertungsTyp.Passiv, new TimeSpan(0, 1, 2)),
+                new Griffbewertungspunkt(HeimGast.Heim, GriffbewertungsTyp.Aktivitaetszeit, new TimeSpan(0, 1, 37)),
+                new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 2, 8), 1),
+                new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 2, 51), 4),
+                new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 2, 56), 2),
+                new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 3, 46), 2),
+                new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 3, 57), 2),
+                new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 4, 1), 2),
+                new Griffbewertungspunkt(HeimGast.Gast, GriffbewertungsTyp.Punkt, new TimeSpan(0, 4, 15), 2)
+            };
 
             einzelkampf.Wertungspunkte.Should().BeEquivalentTo(sollPunkte);
         }

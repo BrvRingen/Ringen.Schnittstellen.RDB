@@ -4,12 +4,12 @@ using System.IO;
 using FluentAssertions;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using Ringen.Schnittstelle.RDB.Factories;
-using Ringen.Schnittstelle.RDB.Mapper;
 using Ringen.Schnittstellen.Contracts.Models;
 using Ringen.Schnittstellen.Contracts.Services;
+using Ringen.Schnittstellen.RDB.Factories;
+using Ringen.Schnittstellen.RDB.Mapper;
 
-namespace Ringen.Schnittstelle.RDB.Tests.Mapper
+namespace Ringen.Schnittstellen.RDB.Tests.Mapper
 {
     [TestFixture]
     public class MannschaftskampfPostMapperTests

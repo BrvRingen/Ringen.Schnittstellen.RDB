@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
-using Ringen.Schnittstelle.RDB.Factories;
 using Ringen.Schnittstellen.Contracts.Models;
 using Ringen.Schnittstellen.Contracts.Models.Enums;
 using Ringen.Schnittstellen.Contracts.Services;
+using Ringen.Schnittstellen.RDB.Factories;
 
-namespace Ringen.Schnittstelle.RDB.Tests.ServiceTests.SaisonInformationenTests
+namespace Ringen.Schnittstellen.RDB.Tests.ServiceTests.SaisonInformationenTests
 {
     [TestFixture]
     public class GetMannschaftskampfSchemaTests
