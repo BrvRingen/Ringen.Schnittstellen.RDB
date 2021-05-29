@@ -1,0 +1,47 @@
+<Project ToolsVersion="15.0"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Nullable>enable</Nullable>
+        <LangVersion>9</LangVersion>
+        <IsPackable>false</IsPackable>
+		<OutputPath>..\..\Package\lib\</OutputPath>
+    </PropertyGroup>
+    <PropertyGroup>
+        <Version>$(GitVersion_SemVer)</Version>
+        <Version Condition="'$(Version)' == ''">0.0.1</Version>
+        <FileVersion>0.0.1</FileVersion>
+        <FileVersion Condition="'$(GitVersion_MajorMinorPatch)' != '' And '$(GitVersion_CommitsSinceVersionSource)' != ''">$(GitVersion_MajorMinorPatch).$(GitVersion_CommitsSinceVersionSource)</FileVersion>
+        <InformationalVersion>$(GitVersion_InformationalVersion)</InformationalVersion>
+        <InformationalVersion Condition="'$(InformationalVersion)' == ''">0.0.1 - localBuild</InformationalVersion>
+        <IsPackable Condition="'$(IsPackable)' == ''">false</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>$(ProjectName)</PackageId>
+        <Authors>Alexander Badewitz, Christian Hennerfeind</Authors>
+        <Company>BRV Ringen</Company>
+        <Copyright>Copyright © $([System.DateTime]::Now.ToString(yyyy)) BRV Ringen</Copyright>
+		<PackageTitle>Ringen Schnittstellen RDB</PackageTitle>
+        <PackageDescription>Schnittstellenerweiterung für RDB-Datenbanken.</PackageDescription>
+        <RepositoryUrl>https://github.com/BrvRingen/Ringen.Schnittstellen.RDB</RepositoryUrl>
+        <PackageProjectUrl>http://www.brv-ringen.de</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>BRV, Ringen, Mannschaftskämpfe, Interfaces, Schnittstellen</PackageTags>
+		<PackageIcon>Icon.png</PackageIcon>
+
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+        <None Include="..\..\Icon.png" Pack="true" PackagePath="\"/>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+</Project>

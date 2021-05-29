@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ringen.Schnittstellen.RDB", "Ringen.Schnittstellen.RDB\Ringen.Schnittstellen.RDB.csproj", "{E9602EEA-A67F-42B0-8D31-A0C005E27CD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ringen.Schnittstellen.RDB", "src\Ringen.Schnittstellen.RDB\Ringen.Schnittstellen.RDB.csproj", "{E9602EEA-A67F-42B0-8D31-A0C005E27CD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ringen.Schnittstellen.RDB.Tests", "Ringen.Schnittstellen.RDB.Tests\Ringen.Schnittstellen.RDB.Tests.csproj", "{24F49A76-ED6F-42FC-82EE-873BCF9A4910}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ringen.Schnittstellen.RDB.Tests", "src\Ringen.Schnittstellen.RDB.Tests\Ringen.Schnittstellen.RDB.Tests.csproj", "{24F49A76-ED6F-42FC-82EE-873BCF9A4910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Http.Library", "Http.Library\Http.Library.csproj", "{40115AEC-9DA1-430F-8C56-AC6E5520BA19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Http.Library", "src\Http.Library\Http.Library.csproj", "{40115AEC-9DA1-430F-8C56-AC6E5520BA19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

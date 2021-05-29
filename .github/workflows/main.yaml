@@ -1,0 +1,47 @@
+on:
+  push:
+    branches:
+      - master
+    tags:
+        - "*"
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    # needed for gitversion    
+    - name: Fetch all history for all tags and branches
+      run: git fetch --prune --unshallow
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9.7
+      with:
+          versionSpec: '5.5.x'
+    - name: Use GitVersion
+      id: gitversion # step id used as reference for output values
+      uses: gittools/actions/gitversion/execute@v0.9.7
+
+    - name: Build solution
+      run: dotnet build --configuration Release Ringen.Schnittstellen.RDB.sln
+    - name: Create the package
+      run: dotnet pack --configuration Release --no-build Ringen.Schnittstellen.RDB.sln  -o Artifacts/Packages
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2 
+      if: startsWith(github.ref, 'refs/tags/v')
+      with:
+        name: nupkg
+        path: 'Artifacts/Packages/**/*.nupkg'
+    - name: Publish to nuget.org
+      run: dotnet nuget push Artifacts/Packages/**/*.nupkg --api-key ${{secrets.NUGET_ORG_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
+      if: startsWith(github.ref, 'refs/tags/v')
+    - name: Publish to github packages
+      run: |
+        for f in Artifacts/Packages/*.nupkg
+        do
+          echo "Uploading package: $f"
+          curl -vX PUT -u "user:${{secrets.GITHUB_TOKEN}}" -F package=@$f https://nuget.pkg.github.com/BRVRingen/
+        done        
+      shell: bash
+      if: startsWith(github.ref, 'refs/tags/v')
