@@ -9,7 +9,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Ninject" Version="3.3.4" />
     <PackageReference Include="NLog" Version="4.7.10" />
-    <PackageReference Include="Ringen.Schnittstellen.Contracts" Version="1.1.2" />
+    <PackageReference Include="Ringen.Schnittstellen.Contracts" Version="1.1.4" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
